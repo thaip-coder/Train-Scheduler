@@ -37,7 +37,7 @@ $('#add-train').on('click', function(event) {
 
 database.ref("/trains").on("child_added", function(snapshot) {
     console.log(snapshot.val());
-    console.log(snapshot.val(),train);
+    console.log(snapshot.val().train);
     console.log(snapshot.val().destination);
     console.log(snapshot.val().frequency);
     console.log(snapshot.val().firstTrain);
